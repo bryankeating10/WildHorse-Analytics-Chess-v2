@@ -13,7 +13,7 @@ def download_pgn(username: str) -> None:
     
     # Set output directory
     project_root = Path(__file__).resolve().parents[1]
-    output_dir = project_root / "Data" / "PGN"
+    output_dir = project_root / "Data" / "Bronze"
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Get archive URLs
@@ -40,6 +40,9 @@ def download_pgn(username: str) -> None:
             all_pgn.append(response.text)
     
     # Save to file
+    username = username.lower()
+    if len(username) > 8:
+        username = username[:8]
     output_file = output_dir / f"{username}.pgn"
     content = "\n\n".join(all_pgn).rstrip() + "\n"
     
