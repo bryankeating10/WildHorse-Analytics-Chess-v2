@@ -8,8 +8,7 @@ class MetaData:
     """
     def __init__(self, pgn_path: str):
         self.project_root = Path(__file__).resolve().parents[1]
-        pgn = Path(pgn_path)
-        self.pgn_path = pgn if pgn.is_absolute() else self.project_root / pgn
+        self.pgn_path = self.project_root / Path(pgn_path)
         self.df = self._extract_metadata()
     
     def _extract_metadata(self) -> pd.DataFrame:
@@ -36,7 +35,7 @@ class MetaData:
         return df
     
     def save_csv(self, output_path: str) -> None:
-        """Save metadata as CSV to Data/Raw directory."""
+        """Save metadata as CSV to Data/Silver directory."""
         
         self.df.to_csv(output_path, index=True)
         print(f"Saved to {output_path}")
