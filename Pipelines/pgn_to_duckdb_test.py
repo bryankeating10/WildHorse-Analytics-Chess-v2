@@ -53,7 +53,7 @@ print("="*50)
 print()
 
 # Process metadata
-meta_df = pd.read_csv(f'{project_root}/Data/Bronze/{username}_meta.csv')
+meta_df = pd.read_csv(f'{project_root}/Data/Silver/{username}_meta.csv')
 meta_df = remove_unnec(meta_df)
 meta_df = convert_datetime(meta_df)
 meta_df = map_results(meta_df)
@@ -65,7 +65,7 @@ print("="*50)
 print()
 
 # Process move data
-move_df = pd.read_csv(f'{project_root}/Data/Bronze/{username}_moves.csv')
+move_df = pd.read_csv(f'{project_root}/Data/Silver/{username}_moves.csv')
 move_df = convert_color(move_df)
 print("="*50)
 print("Adding Stockfish Evaluations...")
