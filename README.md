@@ -106,3 +106,6 @@ and the move data is stored in a long dataframe, ultimately categorized by game,
 * Expand the analytics to include opponent-based performance metrics.
 * Develop an interactive dashboard for browsing player statistics.
 * Incorporate machine learning to predict outcomes or detect playstyle trends.
+
+## Resources
+- 365Chess. *Chess ECO Codes*. Retrieved from https://www.365chess.com/eco.php
