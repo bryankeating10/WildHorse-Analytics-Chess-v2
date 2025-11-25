@@ -7,3 +7,6 @@ Data/
 
 # All pycache__ directories
 **/__pycache__/
+
+# Any CSV stragglers
+*.csv
