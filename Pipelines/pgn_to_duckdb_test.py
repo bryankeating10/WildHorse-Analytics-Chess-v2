@@ -48,7 +48,7 @@ print()
 # Move data extraction
 move_parser = MoveData(f'{project_root}/Data/Bronze/{username}.pgn')
 move_parser.save_csv(f'{project_root}/Data/Silver/{username}_moves.csv')
-print()
+
 print("="*50)
 print("Move Data Extraction Complete")
 print("="*50)
